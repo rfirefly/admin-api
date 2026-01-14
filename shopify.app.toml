@@ -2,7 +2,7 @@
 
 client_id = "d7f6ef0c059a39067232649c6d235775"
 name = "admin-api"
-application_url = "https://example.com"
+application_url = "https://admin-api-orcin.vercel.app"
 embedded = true
 
 [build]
