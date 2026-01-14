@@ -1,16 +1,12 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-generator client {
-  provider = "prisma-client-js"
+// Define database connection via the `DATABASE_URL` env var
+datasource db {
+  provider = "postgresql"
+  url      = "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RfaWQiOjEsInNlY3VyZV9rZXkiOiJza19ZQUVrdnM5alVRNGp5Z3F4WlQ4UG8iLCJhcGlfa2V5IjoiMDFLRVhXUzE5QjRFUk1UUUM3RTNLMlRHMlEiLCJ0ZW5hbnRfaWQiOiI3MDAzMzY5N2YzMzdjYzhjMDAwZmVlM2RkMmVlZjI3MzMxYTMwMDMwNWY5NjVhMDUwOWQ0ZjcxNGU2YjAwZTVhIiwiaW50ZXJuYWxfc2VjcmV0IjoiN2IxOTNjYTAtZTEwOC00OTY1LWEyZTEtYWFlMmY2YjRlZmY5In0.8RsiGWmXHaSd9eBFkv0-H_oVO5t4CynohR7ndBirq9Q"
 }
 
-// Note that some adapters may set a maximum length for the String type by default, please ensure your strings are long
-// enough when changing adapters.
-// See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
-datasource db {
-  provider = "sqlite"
-  url      = "file:dev.sqlite"
+// Define custom output path for generated Prisma Client
+generator client {
+  provider = "prisma-client-js"
 }
 
 model Session {
